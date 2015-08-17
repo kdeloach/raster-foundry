@@ -1,11 +1,26 @@
 'use strict';
 
+var $ = require('jquery'),
+    views = require('./views'),
+    router = require('../router').router;
+
 var HomeController = {
     index: function() {
-        window.console.log('Hello world');
+        router.navigate('/login', {trigger: true});
+    }
+};
+
+var UserController = {
+    login: function() {
+        var view = new views.LoginView();
+        $('#container').html(view.render());
+    },
+
+    logout: function() {
     }
 };
 
 module.exports = {
-    HomeController: HomeController
+    HomeController: HomeController,
+    UserController: UserController
 };

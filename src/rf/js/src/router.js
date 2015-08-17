@@ -1,7 +1,6 @@
 'use strict';
 
 var Backbone = require('../shim/backbone'),
-    $ = require('jquery'),
     _ = require('underscore');
 
 var AppRouter = Backbone.Marionette.AppRouter.extend({

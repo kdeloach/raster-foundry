@@ -7,9 +7,9 @@ var $ = require('jquery'),
     models = require('./core/models'),
     router = require('./router').router;
 
-var App = new Marionette.Application({
+var App = Marionette.Application.extend({
     initialize: function() {
-        this.setupMap();
+        //this.setupMap();
         this.setupNavigation();
     },
 
